@@ -26,18 +26,18 @@ class ObjectNode extends SceneNode {
 
         this.hasTexture = 0;
         this.hasNormalMap = 0;
-        if (textureName != "" && imageExists('/objects/' + this.textureName)) {
+        if (textureName != "" && imageExists('objects/' + this.textureName)) {
             console.log("Loading texture: " + this.textureName)
             this.textureImage = new Image();
-            this.textureImage.src = '/objects/' + this.textureName;
+            this.textureImage.src = 'objects/' + this.textureName;
             this.textureImage.onload = function () {
                 this.hasTexture = 1;
             }.bind(this);
         }
 
-        if (normalName != "" && imageExists('/objects/' + this.normalName)) {
+        if (normalName != "" && imageExists('objects/' + this.normalName)) {
             this.normalImage = new Image();
-            this.normalImage.src = '/objects/' + this.normalName;
+            this.normalImage.src = 'objects/' + this.normalName;
             this.normalImage.onload = function () {
                 this.hasNormalMap = 1;
             }.bind(this);
