@@ -40,7 +40,7 @@
             {
                 "name": "plane",
                 "type": "object",
-                "obj": "../objects/plane.obj",
+                "obj": "webgl/objects/plane.obj",
                 "color": "#022851",
                 "translation": [0,-1.0,0],
                 "rotation": [0,0,0],
@@ -57,7 +57,7 @@
                     {
                         "name": "egghead",
                         "type": "object",
-                        "obj": "../objects/egghead.obj",
+                        "obj": "webgl/objects/egghead.obj",
                         "color": "#33F0FF",
                         "translation": [0,-1,5],
                         "rotation": [0,125,0],
@@ -67,7 +67,7 @@
                     {
                         "name": "cylinder",
                         "type": "object",
-                        "obj": "../objects/cylinder.obj",
+                        "obj": "webgl/objects/cylinder.obj",
                         "color": "#33F0FF",
                         "translation": [-7,0,0],
                         "rotation": [0,0,0],
@@ -77,7 +77,7 @@
                     {
                         "name": "sphere",
                         "type": "object",
-                        "obj": "../objects/sp.obj",
+                        "obj": "webgl/objects/sp.obj",
                         "color": "#33F0FF",
                         "translation": [-7,2,0],
                         "rotation": [0,0,0],
@@ -87,7 +87,7 @@
                     {
                         "name": "moon",
                         "type": "object",
-                        "obj": "../objects/sp2.obj",
+                        "obj": "webgl/objects/sp2.obj",
                         "color": "#33F0FF",
                         "translation": [5,20,20],
                         "rotation": [0,180,0],
@@ -97,7 +97,7 @@
                     {
                         "name": "cube",
                         "type": "object",
-                        "obj": "../objects/cube.obj",
+                        "obj": "webgl/objects/cube.obj",
                         "color": "#33F0FF",
                         "translation": [7,0,-2],
                         "rotation": [0,45,0],
@@ -107,7 +107,7 @@
                     {
                         "name": "BasketBall",
                         "type": "object",
-                        "obj": "../objects/bb.obj",
+                        "obj": "webgl/objects/bb.obj",
                         "color": "#33F0FF",
                         "translation": [7,1.64,-2],
                         "rotation": [0,0,0],
@@ -117,7 +117,7 @@
                     {
                         "name": "cuke",
                         "type": "object",
-                        "obj": "../objects/cuke1.obj",
+                        "obj": "webgl/objects/cuke1.obj",
                         "color": "#33F0FF",
                         "translation": [8.5,0,-5],
                         "rotation": [0,100,0],
@@ -127,7 +127,7 @@
                     {
                         "name": "Sofa",
                         "type": "object",
-                        "obj": "../objects/sofa.obj",
+                        "obj": "webgl/objects/sofa.obj",
                         "color": "#33F0FF",
                         "translation": [-11,-1,-4],
                         "rotation": [0,120,0],
