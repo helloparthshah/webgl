@@ -14,7 +14,7 @@ function main( )
 {
 
     // load scene file
-    let scene = loadSceneFile( "scenes/scene.json" )
+    let scene = loadSceneFile( "/webgl/scenes/scene.json" )
     console.log( scene )
 
     // start app
