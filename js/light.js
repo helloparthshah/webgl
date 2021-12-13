@@ -7,7 +7,7 @@ class PointLight extends ObjectNode {
         if (!PointLight.instanceCount)
             PointLight.instanceCount = 0
 
-        let [sphere, _] = loadObjFile("../objects/sphere.obj", [1,0,0])
+        let [sphere, _] = loadObjFile("objects/sphere.obj", [1,0,0])
 
         super(sphere, 'point_light'+PointLight.instanceCount, parent, position, vec3.create(), vec3.fromValues(0.25, 0.25, 0.25))
         PointLight.instanceCount += 1
@@ -31,7 +31,7 @@ class DirectionalLight extends ObjectNode {
         if (!DirectionalLight.instanceCount)
         DirectionalLight.instanceCount = 0
 
-        let [pyramid, _]  = loadObjFile("../objects/pyramid.obj", [1,0,0])
+        let [pyramid, _]  = loadObjFile("objects/pyramid.obj", [1,0,0])
 
         super(pyramid, 'dir_light'+DirectionalLight.instanceCount, parent, vec3.fromValues(5 - 2.5 * (DirectionalLight.instanceCount%4), 3, 5 - 2.5*(Math.floor(DirectionalLight.instanceCount/4))), vec3.normalize( vec3.create(), direction ), vec3.fromValues(0.4, 0.4, 0.4))
         DirectionalLight.instanceCount += 1
