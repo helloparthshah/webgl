@@ -31,10 +31,12 @@ header {
 }
 
 #canvas {
-    width: 60vw;
-    height: calc(65*0.56vw);
-    max-width: calc(65vh/0.56);
-    max-height: 65vh;
+    /* width: 60vw; */
+    /* height: calc(65*0.56vw); */
+    /* max-width: calc(65vh/0.56); */
+    /* max-height: 65vh; */
+    max-width: calc(100vh/0.56);
+    max-height: calc(100*0.56vw);
     margin: 0 auto;
     background-color: white;
 }
