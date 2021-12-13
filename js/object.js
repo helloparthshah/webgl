@@ -75,7 +75,7 @@ class ObjectNode extends SceneNode {
         gl.bufferData(gl.ARRAY_BUFFER, this.vbo_data, gl.STATIC_DRAW)
     }
 
-    render(gl, shader, flat = false, filtering = gl.LINEAR) {
+    render(gl, shader, flat = false, phong = false, filtering = gl.LINEAR) {
         let old_filtering = this.filtering
         this.filtering = filtering
         if (this.vbo == null)
@@ -103,30 +103,31 @@ class ObjectNode extends SceneNode {
             offset = 3 * 3 * 4
         shader.setArrayBuffer("a_normal", this.vbo, 3, stride, offset);
 
-        offset = 4 * 3 * 4
-        shader.setArrayBuffer("a_texture", this.vbo, 2, stride, offset);
+        if (phong) {
+            offset = 4 * 3 * 4
+            shader.setArrayBuffer("a_texture", this.vbo, 2, stride, offset);
 
-        offset = (4 * 3 + 2) * 4
-        shader.setArrayBuffer("a_vertex_tangent", this.vbo, 3, stride, offset);
+            offset = (4 * 3 + 2) * 4
+            shader.setArrayBuffer("a_vertex_tangent", this.vbo, 3, stride, offset);
 
-        offset = (5 * 3 + 2) * 4
-        shader.setArrayBuffer("a_vertex_bitangent", this.vbo, 3, stride, offset);
+            offset = (5 * 3 + 2) * 4
+            shader.setArrayBuffer("a_vertex_bitangent", this.vbo, 3, stride, offset);
 
-        if (this.hasTexture == 1 && this.texture != null) {
-            gl.activeTexture(gl.TEXTURE0)
-            gl.bindTexture(gl.TEXTURE_2D, this.texture)
-            shader.setUniform1i("u_texture", 0)
+            if (this.hasTexture == 1 && this.texture != null) {
+                gl.activeTexture(gl.TEXTURE0)
+                gl.bindTexture(gl.TEXTURE_2D, this.texture)
+                shader.setUniform1i("u_texture", 0)
+            }
+
+            if (this.hasNormalMap == 1 && this.normalMap != null) {
+                gl.activeTexture(gl.TEXTURE1)
+                gl.bindTexture(gl.TEXTURE_2D, this.normalMap)
+                shader.setUniform1i("u_normal_map", 1)
+            }
+
+            shader.setUniform1f("t", this.hasTexture);
+            shader.setUniform1f("n", this.hasNormalMap);
         }
-
-        if (this.hasNormalMap == 1 && this.normalMap != null) {
-            gl.activeTexture(gl.TEXTURE1)
-            gl.bindTexture(gl.TEXTURE_2D, this.normalMap)
-            shader.setUniform1i("u_normal_map", 1)
-        }
-
-        shader.setUniform1f("t", this.hasTexture);
-        shader.setUniform1f("n", this.hasNormalMap);
-
         // Material Properties
         shader.setUniform3f("ka", this.material.ka)
         shader.setUniform3f("kd", this.material.kd)

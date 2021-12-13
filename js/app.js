@@ -175,7 +175,7 @@ class App {
         // Camera
         this.shader.setUniform3f("u_camera_position", this.camera.position)
 
-        node.render(this.gl, this.shader, this.app_state.is_flatshading, this.filtering)
+        node.render(this.gl, this.shader, this.app_state.is_flatshading, this.app_state.is_phongshading, this.filtering)
 
         for (let child of node.children) {
             if (child.type == 'light')

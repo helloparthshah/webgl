@@ -22,6 +22,7 @@ class AppState {
         this.is_selecting = false
         this.is_new_selection = false
         this.is_flatshading = false
+        this.is_phongshading = true
 
         // get list of ui indicators
         this.ui_categories = {
@@ -94,22 +95,27 @@ class AppState {
         if (Input.isKeyDown("1")) {
             this.app.shader = this.app.wireframe_shader
             this.is_flatshading = true
+            this.is_phongshading = false
             this.updateUI("shading", "wireframe")
         } else if (Input.isKeyDown("2")) {
             this.app.shader = this.app.flat_shader
             this.is_flatshading = true
+            this.is_phongshading = false
             this.updateUI("shading", "flat")
         } else if (Input.isKeyDown("3")) {
             this.app.shader = this.app.gouraud_shader
             this.is_flatshading = true
+            this.is_phongshading = false
             this.updateUI("shading", "flat_gouraud")
         } else if (Input.isKeyDown("4")) {
             this.app.shader = this.app.gouraud_shader
             this.is_flatshading = false
+            this.is_phongshading = false
             this.updateUI("shading", "gouraud")
         } else if (Input.isKeyDown("5")) {
             this.app.shader = this.app.phong_shader
             this.is_flatshading = false
+            this.is_phongshading = true
             this.updateUI("shading", "phong")
         }
 
