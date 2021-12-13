@@ -25,10 +25,10 @@ class App {
 
         // shaders
         console.log("Loading Shaders")
-        this.wireframe_shader = new Shader(this.gl, "../shaders/wireframe.vert.glsl", "../shaders/wireframe.frag.glsl")
-        this.flat_shader = new Shader(this.gl, "../shaders/flat.vert.glsl", "../shaders/flat.frag.glsl")
-        this.gouraud_shader = new Shader(this.gl, "../shaders/gouraud.vert.glsl", "../shaders/gouraud.frag.glsl")
-        this.phong_shader = new Shader(this.gl, "../shaders/phong.vert.glsl", "../shaders/phong.frag.glsl")
+        this.wireframe_shader = new Shader(this.gl, "shaders/wireframe.vert.glsl", "shaders/wireframe.frag.glsl")
+        this.flat_shader = new Shader(this.gl, "shaders/flat.vert.glsl", "shaders/flat.frag.glsl")
+        this.gouraud_shader = new Shader(this.gl, "shaders/gouraud.vert.glsl", "shaders/gouraud.frag.glsl")
+        this.phong_shader = new Shader(this.gl, "shaders/phong.vert.glsl", "shaders/phong.frag.glsl")
         this.shader = this.phong_shader
 
         // camera
