@@ -1,0 +1,141 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,0,-6],
+        "lookat": [0,0,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "lights": {
+        "ambient": [0.1, 0.1, 0.1],
+        "point_lights": [
+            {
+                "position": [-9, 2, -4],
+                "Id": [0.8, 0.8, 1.2],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            },
+            {
+                "position": [0, 2, 0],
+                "Id": [1.0, 0.6, 0.3],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            }
+        ],
+        "directional_lights": [
+            {
+                "direction": [-0.5, -1, -1],
+                "Id": [0.6, 0.3, 0],
+                "Is": [1, 1, 1]
+            }
+        ]
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,2],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#022851",
+                "translation": [0,-1.0,0],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "node1",
+                "type": "node",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [1,1,1],
+                "children": [
+                    {
+                        "name": "egghead",
+                        "type": "object",
+                        "obj": "../objects/egghead.obj",
+                        "color": "#33F0FF",
+                        "translation": [0,-1,5],
+                        "rotation": [0,125,0],
+                        "scale": [2,2,2],
+                        "children": []
+                    },
+                    {
+                        "name": "cylinder",
+                        "type": "object",
+                        "obj": "../objects/cylinder.obj",
+                        "color": "#33F0FF",
+                        "translation": [-7,0,0],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "sphere",
+                        "type": "object",
+                        "obj": "../objects/sp.obj",
+                        "color": "#33F0FF",
+                        "translation": [-7,2,0],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "moon",
+                        "type": "object",
+                        "obj": "../objects/sp2.obj",
+                        "color": "#33F0FF",
+                        "translation": [5,20,20],
+                        "rotation": [0,180,0],
+                        "scale": [10,10,10],
+                        "children": []
+                    },
+                    {
+                        "name": "cube",
+                        "type": "object",
+                        "obj": "../objects/cube.obj",
+                        "color": "#33F0FF",
+                        "translation": [7,0,-2],
+                        "rotation": [0,45,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "BasketBall",
+                        "type": "object",
+                        "obj": "../objects/bb.obj",
+                        "color": "#33F0FF",
+                        "translation": [7,1.64,-2],
+                        "rotation": [0,0,0],
+                        "scale": [6,6,6],
+                        "children": []
+                    },
+                    {
+                        "name": "cuke",
+                        "type": "object",
+                        "obj": "../objects/cuke1.obj",
+                        "color": "#33F0FF",
+                        "translation": [8.5,0,-5],
+                        "rotation": [0,100,0],
+                        "scale": [0.05,0.05,0.05],
+                        "children": []
+                    },
+                    {
+                        "name": "Sofa",
+                        "type": "object",
+                        "obj": "../objects/sofa.obj",
+                        "color": "#33F0FF",
+                        "translation": [-11,-1,-4],
+                        "rotation": [0,120,0],
+                        "scale": [0.03,0.03,0.03],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

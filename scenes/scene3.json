@@ -1,0 +1,82 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,1,-2],
+        "lookat": [0,0.5,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "lights": {
+        "ambient": [0.2, 0.2, 0.2],
+        "point_lights": [
+            {
+                "position": [-2, 6, 6],
+                "Id": [0.5, 0.5, 0.8],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            },
+            {
+                "position": [3, 0.5, 6],
+                "Id": [0.5, 0.4, 0.15],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            }
+        ],
+        "directional_lights": [
+            {
+                "direction": [-2, -2, 0],
+                "Id": [0.3, 0.3, 0.3],
+                "Is": [1, 1, 1]
+            }
+        ]
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,0],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#022851",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "toilet",
+                "type": "object",
+                "obj": "../objects/toilet.obj",
+                "color": "#ffffff",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [2.5,2.5,2.5],
+                "children": []
+            },
+            {
+                "name": "table",
+                "type": "object",
+                "obj": "../objects/table.obj",
+                "color": "#523f38",
+                "translation": [1.8,0,-0.5],
+                "rotation": [0,-30,0],
+                "scale": [0.7,0.7,0.7],
+                "children": []
+            },
+            {
+                "name": "teapot",
+                "type": "object",
+                "obj": "../objects/teapot.obj",
+                "color": "#1ea896",
+                "translation": [2,1.08,-0.5],
+                "rotation": [0,-120,0],
+                "scale": [1.0,1.0,1.0],
+                "children": []
+            }
+        ]
+    }
+}

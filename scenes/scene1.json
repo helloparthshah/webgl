@@ -1,0 +1,151 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,0,-6],
+        "lookat": [0,0,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "lights": {
+        "ambient": [0.1, 0.1, 0.1],
+        "point_lights": [
+            {
+                "position": [-4, 4, -2],
+                "Id": [0.8, 0.8, 1.2],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            },
+            {
+                "position": [0, 2, 0],
+                "Id": [1.0, 0.6, 0.3],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            }
+        ],
+        "directional_lights": [
+            {
+                "direction": [-0.5, -1, -1],
+                "Id": [0.6, 0.3, 0],
+                "Is": [1, 1, 1]
+            }
+        ]
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,2],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#022851",
+                "translation": [0,-1.0,0],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "node1",
+                "type": "node",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [1,1,1],
+                "children": [
+                    {
+                        "name": "EggHead",
+                        "type": "object",
+                        "obj": "../objects/egg.obj",
+                        "color": "#33F0FF",
+                        "translation": [0,0.5,0],
+                        "rotation": [0,0,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "Dog",
+                        "type": "object",
+                        "obj": "../objects/dog_biking.obj",
+                        "color": "#33F0FF",
+                        "translation": [0,0,-4],
+                        "rotation": [0,45,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "Birdman",
+                        "type": "object",
+                        "obj": "../objects/birdman.obj",
+                        "color": "#33F0FF",
+                        "translation": [3,0.5,-1.5],
+                        "rotation": [0,-90,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "Sphere",
+                        "type": "object",
+                        "obj": "../objects/sphere.obj",
+                        "color": "#33F0FF",
+                        "translation": [-3,0.5,-1.5],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "Needle",
+                        "type": "object",
+                        "obj": "../objects/pole.obj",
+                        "color": "#33F0FF",
+                        "translation": [3,0.5,3],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "Cube",
+                        "type": "object",
+                        "obj": "../objects/cube.obj",
+                        "color": "#33F0FF",
+                        "translation": [-3,0,3],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "cube1",
+                        "type": "object",
+                        "obj": "../objects/cuke1.obj",
+                        "color": "#33F0FF",
+                        "translation": [-3,4,3],
+                        "rotation": [0,0,0],
+                        "scale": [0.025,0.025,0.025],
+                        "children": []
+                    },
+                    {
+                        "name": "Cylinder",
+                        "type": "object",
+                        "obj": "../objects/cylinder.obj",
+                        "color": "#33F0FF",
+                        "translation": [-3,1,-5],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "egghead",
+                        "type": "object",
+                        "obj": "../objects/egghead.obj",
+                        "color": "#33F0FF",
+                        "translation": [-1,-1,-10],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

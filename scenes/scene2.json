@@ -1,0 +1,121 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,0,-6],
+        "lookat": [0,0,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "lights": {
+        "ambient": [0.2, 0.2, 0.2],
+        "point_lights": [
+            {
+                "position": [-2, 2, 6],
+                "Id": [0.5, 0.5, 0.8],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            },
+            {
+                "position": [3, 0, -6],
+                "Id": [0.5, 0.4, 0.15],
+                "Is": [1, 1, 1],
+                "k": 0.0001
+            }
+        ],
+        "directional_lights": [
+            {
+                "direction": [-2, -2, 0],
+                "Id": [0.3, 0.3, 0.3],
+                "Is": [1, 1, 1]
+            }
+        ]
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,2],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#022851",
+                "translation": [0,-1.0,0],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "node1",
+                "type": "node",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [1,1,1],
+                "children": [
+                    {
+                        "name": "cube",
+                        "type": "object",
+                        "obj": "../objects/cube.obj",
+                        "color": "#33F0FF",
+                        "translation": [-5,-0.2,-1.2],
+                        "rotation": [0,0,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "sphere",
+                        "type": "object",
+                        "obj": "../objects/sphere.obj",
+                        "color": "#33F0FF",
+                        "translation": [0,0,1.2],
+                        "rotation": [0,0,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "pyramid",
+                        "type": "object",
+                        "obj": "../objects/pyramid.obj",
+                        "color": "#fcba03",
+                        "translation": [-0.5,0,-0.8],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "prism",
+                        "type": "object",
+                        "obj": "../objects/prism.obj",
+                        "color": "#ab0eab",
+                        "translation": [-4,0,1.5],
+                        "rotation": [0,-60,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "table",
+                        "type": "object",
+                        "obj": "../objects/table.obj",
+                        "color": "#523f38",
+                        "translation": [1.8,-1,-3.5],
+                        "rotation": [0,-30,0],
+                        "scale": [0.7,0.7,0.7],
+                        "children": []
+                    },
+                    {
+                        "name": "teapot",
+                        "type": "object",
+                        "obj": "../objects/teapot.obj",
+                        "color": "#1ea896",
+                        "translation": [2,0.2,-3.5],
+                        "rotation": [0,-120,0],
+                        "scale": [1.5,1.5,1.5],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

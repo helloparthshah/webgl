@@ -1,0 +1,9 @@
+newmtl birdman
+Ka 1.0 1.0 1.0
+Kd 0.9 0.6 0.2
+Ks 0.6 0.6 0.6
+d 1.0
+Ns 32.0
+illum 0
+map_Kd birdman.jpg
+

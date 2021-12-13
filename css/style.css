@@ -1,0 +1,92 @@
+* {
+    font-family: monospace;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: yellow;
+}
+
+#header-container {
+    margin: 2vh;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffecc2;
+}
+
+#webgl-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#canvas {
+    width: 60vw;
+    height: calc(65*0.56vw);
+    max-width: calc(65vh/0.56);
+    max-height: 65vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#lighting-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff8e9;
+    width: 40vw;
+    
+    max-width: 250px;
+    height: 65vh;
+    margin: 0 0;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.parameter-container {
+    flex-direction: column;
+    margin: 1em;
+    align-content: center;
+}
+
+.settings-container {
+    margin: 0;
+    background-color: #fff8e9;
+    display: flex;
+    flex-direction: row;
+}
+
+.modes-container {
+    flex-direction: column;
+    margin: 1em;
+    align-content: center;
+}
+
+h3 {
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+.modes {
+    display: flex;
+    flex-direction: row;
+}
+
+.indicator {
+    margin: 1em;
+    color: lightgray;
+}
+
+.indicator.active {
+    color: blue;
+}

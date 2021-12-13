@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>Assignment 2</h1>
+            <h2>3D Transformation and Viewing | <a
+                    href="https://canvas.ucdavis.edu/courses/595787/assignments/718397">Instructions</a></h2>
+        </div>
+        <div class="settings-container">
+            <div class="modes-container">
+                <h3>Camera Mode</h3>
+                <div class="modes">
+                    <div id="fpsCamMode" class="indicator inactive">FPS</div>
+                    <div id="statCamMode" class="indicator inactive">Stationary</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Projection Mode</h3>
+                <div class="modes">
+                    <div id="perspProjMode" class="indicator inactive">[P]erspective</div>
+                    <div id="orthoProjMode" class="indicator inactive">[O]rthographic</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <!-- do ids stack? -->
+                <h3>Selection</h3>
+                <div class="modes">
+                    <div id="selectionRaycasting" class="indicator inactive">[R]aycast</div>
+                    <div id="selectionTarget" class="indicator inactive">No Target Selected</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Shading</h3>
+                <div class="modes">
+                    <div id="wireframeShading" class="indicator inactive">[1] Wireframe</div>
+                    <div id="flatShading" class="indicator inactive">[2] Flat</div>
+                    <div id="flatGouraudShading" class="indicator inactive">[3] Flat Gouraud</div>
+                    <div id="gouraudShading" class="indicator inactive">[4] Gouraud</div>
+                    <div id="phongShading" class="indicator inactive">[5] Phong</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Filtering</h3>
+                <div class="modes">
+                    <div id="nearest" class="indicator inactive">[n] Nearest</div>
+                    <div id="linear" class="indicator inactive">[l] Linear</div>
+                </div>
+            </div>
+        </div>
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
+            <div id="lighting-container">
+                
+                <div class="parameter-container">
+                    <h3>Materials</h3><br>
+
+                    <span>Shininess</span><br>
+                    <span>MIN</span><input id="materialShininess" onchange="materialShininessChanged(this.value)" type="range" min="1" max="256"><span>MAX</span><br><br>
+                    <span>Ka</span><br>
+                    <input id="materialKa" onchange="materialKaChanged(this.value)" type="color" value="#999999"><br><br>
+                    <span>Kd</span><br>
+                    <input id="materialKd" onchange="materialKdChanged(this.value)" type="color" value="#999999"><br><br>
+                    <span>Ks</span><br>
+                    <input id="materialKs" onchange="materialKsChanged(this.value)" type="color" value="#999999"><br><br>
+  
+
+                </div>
+                <div class="parameter-container">
+                    <h3>Lighting</h3><br>
+                    <span>Ia</span><br>
+                    <input id="lightingIa" onchange="lightingIaChanged(this.value)" type="color" value="#999999"><br><br>
+                    <span>Id</span><br>
+                    <input id="lightingId" onchange="lightingIdChanged(this.value)" type="color" value="#999999"><br><br>
+                    <span>Is</span><br>
+                    <input id="lightingIs" onchange="lightingIsChanged(this.value)" type="color" value="#999999"><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript">
+        const {mat2, mat3, mat4, vec2, vec3, vec4, quat} = glMatrix;
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

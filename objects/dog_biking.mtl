@@ -1,0 +1,8 @@
+newmtl model
+Ka 1.0 1.0 1.0
+Kd 0.2 0.2 0.2
+Ks 0.1 0.1 0.1
+d 1.0
+Ns 32.0
+illum 0
+

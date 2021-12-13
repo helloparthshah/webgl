@@ -1,0 +1,8 @@
+newmtl egg
+Ka 1.0 1.0 1.0
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd egg.jpg
